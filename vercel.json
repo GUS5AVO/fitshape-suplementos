@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://fitshape-suplementos.gmsosdigital.chatgpt.site/"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://fitshape-suplementos.gmsosdigital.chatgpt.site/api/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "https://fitshape-suplementos.gmsosdigital.chatgpt.site/assets/:path*"
+    },
+    {
+      "source": "/app.js",
+      "destination": "https://fitshape-suplementos.gmsosdigital.chatgpt.site/app.js"
+    },
+    {
+      "source": "/styles.css",
+      "destination": "https://fitshape-suplementos.gmsosdigital.chatgpt.site/styles.css"
+    },
+    {
+      "source": "/catalog.json",
+      "destination": "https://fitshape-suplementos.gmsosdigital.chatgpt.site/catalog.json"
+    }
+  ]
+}
