@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://fitshape-suplementos.gmsosdigital.chatgpt.site/#/operacao",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
