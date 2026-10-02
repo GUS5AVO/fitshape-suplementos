@@ -12,6 +12,7 @@ export default async function handler(req, res) {
     catalog: {GET:'/api/catalog'},
     campaigns: {GET:'/api/campaigns',PUT:'/api/campaigns'},
     inventory: {PUT:'/api/inventory'},
+    shipping: {PUT:'/api/shipping'},
     orders: {GET:'/api/orders?all=1'},
   };
   let path = routes[action]?.[req.method];
