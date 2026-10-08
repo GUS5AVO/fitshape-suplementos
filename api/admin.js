@@ -13,6 +13,7 @@ export default async function handler(req, res) {
     campaigns: {GET:'/api/campaigns',PUT:'/api/campaigns'},
     inventory: {PUT:'/api/inventory'},
     shipping: {PUT:'/api/shipping'},
+    finance: {GET:'/api/finance',POST:'/api/finance'},
     orders: {GET:'/api/orders?all=1'},
   };
   let path = routes[action]?.[req.method];
@@ -20,6 +21,7 @@ export default async function handler(req, res) {
     const id = url.searchParams.get('id') || '';
     if (/^FS-[a-f0-9-]{36}$/i.test(id)) path = `/api/orders/${encodeURIComponent(id)}`;
   }
+  if (action === 'finance' && req.method === 'GET') { const month=url.searchParams.get('month'); if(month && /^\d{4}-\d{2}$/.test(month)) path += '?month='+encodeURIComponent(month); }
   if (!path) return res.status(404).json({error:'Ação não encontrada.'});
 
   const writing = !['GET','HEAD'].includes(req.method);
